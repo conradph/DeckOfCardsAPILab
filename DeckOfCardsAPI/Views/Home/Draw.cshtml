@@ -1,0 +1,13 @@
+﻿@model CardDraw
+
+<div style="display: inline-block">
+
+    @foreach (var c in Model.cards)
+    {
+        <div style="display: inline-block">
+            <img src=@c.images.png />
+            <p>@c.value @c.suit</p>
+        </div>
+    }
+</div>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Draw" asp-route-deckid=@Model.deck_id>Draw 5 New Cards</a>
